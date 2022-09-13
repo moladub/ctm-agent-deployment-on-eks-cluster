@@ -25,11 +25,15 @@ spec:
           - name: AAPI_END_POINT
             value: "https://<UPDATE>:8443/automation-api"
           - name: AAPI_USER
-            value: "user"
+            valueFrom:
+              secretKeyRef:
+                name: my-ctm-secret
+                key: username
           - name: AAPI_PASS
-            value: "password"
-            # user's password, will be present in the logs! consider using k8s secret
-
+            valueFrom:
+              secretKeyRef: 
+                name: my-ctm-secret
+                key:  password                      
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
