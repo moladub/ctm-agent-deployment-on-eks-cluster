@@ -1,9 +1,9 @@
 #!/bin/bash
 #use agent's java for provision setup
 CTM_ENV=endpoint
-CTM_SERVER=smprod 
+CTM_SERVER= "" 
 #CTM_HOSTGROUP=app0
-CTM_HOSTGROUP=molagents
+CTM_HOSTGROUP= ""
 CTM_AGENT_PORT=7010
 ALIAS=$(hostname):$CTM_AGENT_PORT
 
